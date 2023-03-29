@@ -1,0 +1,218 @@
+body {
+  background: rgb(229, 189, 213);
+  margin: 0;
+  padding: 0;
+}
+/* #target { background: #203656; } */
+
+#canvas {
+  background: rgb(229, 189, 213);
+  border: unset;
+}
+
+#main {
+  display: none;
+}
+
+#button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 4px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #00000022;
+}
+
+.animate {
+  transform: rotateZ(180deg);
+  transition: 5s;
+}
+
+.container {
+  width: fit-content;
+  position: absolute;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#box,
+#box2,
+#box3 {
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  position: absolute;
+  transform: scale(0);
+}
+.box01,
+.box02,
+.box03,
+.box04,
+.box05,
+.box06,
+.box07,
+.box08,
+.box09 {
+  opacity: 0;
+  position: absolute;
+}
+.appear {
+  transition: all 8s;
+  transform: rotate(-45deg);
+  opacity: 0.6;
+  transition: all 8s;
+}
+
+.pos2 {
+  width: 185px;
+  height: 185px;
+  border-radius: 185px 0;
+  transform-origin: 0 185px;
+  top: 22%;
+  transform: rotate(-45deg);
+  left: 50%;
+  background: indianred;
+}
+
+#box2.start {
+  transform: scale(1);
+  transition: all 10s;
+}
+
+#box2.start :nth-child(1) {
+  transform: rotate(-45deg);
+}
+#box2.start :nth-child(2) {
+  transform: rotate(-25deg);
+}
+#box2.start :nth-child(3) {
+  transform: rotate(-5deg);
+}
+#box2.start :nth-child(4) {
+  transform: rotate(15deg);
+}
+#box2.start :nth-child(5) {
+  transform: rotate(35deg);
+}
+#box2.start :nth-child(6) {
+  transform: rotate(-65deg);
+}
+#box2.start :nth-child(7) {
+  transform: rotate(-85deg);
+}
+#box2.start :nth-child(8) {
+  transform: rotate(-105deg);
+}
+#box2.start :nth-child(9) {
+  transform: rotate(-125deg);
+}
+
+#box2.wilt :nth-child(1) {
+  transform: translateY(250px) translateX(-80px) rotate(15deg);
+  transition: all 6s;
+  animation-delay: 00ms;
+}
+#box2.wilt :nth-child(2) {
+  transform: translateY(250px) translateX(60px) rotate(35deg);
+  transition: all 4s;
+  animation-delay: 200ms;
+}
+#box2.wilt :nth-child(3) {
+  transform: translateY(250px) translateX(100px) rotate(25deg);
+  transition: all 5s;
+  animation-delay: 150ms;
+}
+#box2.wilt :nth-child(4) {
+  transform: translateY(250px) translateX(140px) rotate(35deg);
+  transition: all 7s;
+  animation-delay: 00ms;
+}
+#box2.wilt :nth-child(5) {
+  transform: translateY(250px) translateX(20px) rotate(45deg);
+  transition: all 4s;
+  animation-delay: 100ms;
+}
+#box2.wilt :nth-child(6) {
+  transform: translateY(250px) translateX(0px) rotate(-115deg);
+  transition: all 6s;
+  animation-delay: 100ms;
+}
+#box2.wilt :nth-child(7) {
+  transform: translateY(250px) translateX(-60px) rotate(-125deg);
+  transition: all 7s;
+  animation-delay: 100ms;
+}
+#box2.wilt :nth-child(8) {
+  transform: translateY(250px) translateX(-100px) rotate(-115deg);
+  transition: all 8s;
+  animation-delay: 100ms;
+}
+#box2.wilt :nth-child(9) {
+  transform: translateY(250px) translateX(-130px) rotate(-135deg);
+  transition: all 5s;
+  animation-delay: 50ms;
+}
+
+.coupe {
+  width: 350px;
+  position: absolute;
+  left: 20%;
+  top: 26%;
+  opacity: 0;
+  transition: all 4s;
+}
+.coupe.reveal {
+  opacity: 1;
+}
+
+#container.hide {
+  opacity: 0;
+  transition: all 4s;
+}
+
+.particle {
+  position: absolute;
+  transform: translate(410px, 156px);
+  /* top: 156px;
+  left: 410px; */
+  background: #ffffff;
+  width: 4px;
+  height: 4px;
+  opacity: 0;
+  border-radius: 2px;
+}
+/* 388.2226768640836
+y
+: 
+646.225 */
+
+@keyframes shoot {
+  0% {
+    transform: translate(410px, 156px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
